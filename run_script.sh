@@ -5,3 +5,9 @@ DIR=${PWD}
 
 # Запуск внешнего скрипта
 ${DIR}/start.sh Victor
+
+echo ""
+
+DUMP=$( ${DIR}/start.sh Victor )
+
+echo "${DUMP}"
