@@ -54,5 +54,16 @@ lines_in_file () {
 # `$( )` это запуск кода, функции, внешнего скрипта и возвратить результат,
 # в данном примере в переменную
 NUM_LINES=$( lines_in_file $0 )
+echo The file \"$0\" has ${NUM_LINES} lines in it.
 
+# При желании можно переопределять (или дополнять) другие скрипты
+lines_in_file_alt () {
+  wc() {
+    command wc -l
+  }
+
+  cat $1 | wc
+}
+
+NUM_LINES=$( lines_in_file_alt $0 )
 echo The file \"$0\" has ${NUM_LINES} lines in it.
