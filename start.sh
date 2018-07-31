@@ -2,4 +2,4 @@
 
 NAME="Victor"
 
-echo $NAME
+echo ${NAME}
